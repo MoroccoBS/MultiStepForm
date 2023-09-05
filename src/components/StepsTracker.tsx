@@ -9,7 +9,7 @@ interface StepSelectionProps {
 }
 
 function StepsTracker({ currentStep, FinalStep }: StepSelectionProps) {
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 640px)");
   const backgroundImage = isMobile ? `url(${bgMobile})` : `url(${bgDesktop})`;
   return (
     <div
