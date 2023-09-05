@@ -49,8 +49,8 @@ function Step1({ setUserInfo, onNext, userInfo }: Step1Props) {
 
   const formValidation = (): boolean => {
     const emailRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex: RegExp = /^\+\d{1,3}\d{9}$/;
-
+    const phoneRegex: RegExp =
+      /^(\+\d{1,3}\s?)?(\(\d{1,3}\)\s?)?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,9}$/;
     const nameValue = Name.current?.value || "";
     const emailValue = Email.current?.value || "";
     const phoneValue = Phone.current?.value || "";
